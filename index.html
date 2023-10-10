@@ -1,404 +1,441 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>San Andreas State Police SOP</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: black;
-            /* Text color is black */
-            background-color: #333;
-            background-image: url('https://i.imgur.com/i08KfKI.png');
-            /* Replace 'your-image-url.jpg' with your image URL */
-            background-size: cover;
-            background-attachment: fixed;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            /* Add top padding to move the text lower */
-        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: black;
+        /* Text color is black */
+        background-color: #333;
+        background-image: url("https://i.imgur.com/6KE2PNg.png");
+        /* Replace 'your-image-url.jpg' with your image URL */
+        background-size: cover;
+        background-attachment: fixed;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        /* Add top padding to move the text lower */
+      }
 
-        /* Apply white outline to all text and increase text size */
-        * {
-            font-size: 23px;
-            /* Increase text size */
-            font-weight: bold;
-            /* Make text bold */
-        }
+      /* Apply white outline to all text and increase text size */
+      * {
+        font-size: 23px;
+        /* Increase text size */
+        font-weight: bold;
+        /* Make text bold */
+      }
 
-        /* Style links */
-        a {
-            text-decoration: none;
-            /* Remove underline */
-            color: inherit;
-            /* Inherit text color */
-        }
+      /* Style links */
+      a {
+        text-decoration: none;
+        /* Remove underline */
+        color: inherit;
+        /* Inherit text color */
+      }
 
-        a:hover {
-            color: #007bff;
-            /* Change link color on hover */
-        }
+      a:hover {
+        color: #007bff;
+        /* Change link color on hover */
+      }
 
-        h1 {
-            text-align: center;
-            /* Remove text shadow for headers */
-            text-shadow: none;
-            font-size: 50px;
-            /* Increase text size */
-            font-weight: bold;
-        }
+      h1 {
+        text-align: center;
+        /* Remove text shadow for headers */
+        text-shadow: none;
+        font-size: 50px;
+        /* Increase text size */
+        font-weight: bold;
+      }
 
-        h2,
-        h3 {
-            text-align: center;
-            /* Remove text shadow for headers */
-            text-shadow: none;
-            font-size: 30px;
-            /* Increase text size */
-        }
+      h2,
+      h3 {
+        text-align: center;
+        /* Remove text shadow for headers */
+        text-shadow: none;
+        font-size: 30px;
+        /* Increase text size */
+      }
 
-        /* Create a container div and adjust its margin-top */
-        .content-container {
-            margin-top: 100px;
-            /* Adjust margin-top to move text lower */
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      /* Create a container div and adjust its margin-top */
+      .content-container {
+        margin-top: 100px;
+        /* Adjust margin-top to move text lower */
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        ul {
-            list-style-type: none;
-        }
+      ul {
+        list-style-type: none;
+      }
 
-        ul li:before {
-            content: "•";
-            margin-right: 5px;
-        }
+      ul li:before {
+        content: "•";
+        margin-right: 5px;
+      }
 
-        /* Narrower table */
-        table {
-            width: 70%;
-            /* Adjust the width as needed */
-            border-collapse: collapse;
-        }
+      /* Narrower table */
+      table {
+        width: 70%;
+        /* Adjust the width as needed */
+        border-collapse: collapse;
+      }
 
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
 
-        th {
-            background-color: #f2f2f2;
-            z-index: 6;
-        }
+      th {
+        background-color: #f2f2f2;
+        z-index: 6;
+      }
 
-        td {
-            background-color: #86868660;
-            z-index: 5;
-        }
+      td {
+        background-color: #86868660;
+        z-index: 5;
+      }
 
-        /* Adjust the ranking hierarchy */
-        .rank {
-            font-size: 24px;
-            /* Increase rank font size */
-        }
+      /* Adjust the ranking hierarchy */
+      .rank {
+        font-size: 24px;
+        /* Increase rank font size */
+      }
 
-        .rank-title {
-            font-size: 20px;
-            /* Increase rank title font size */
-        }
+      .rank-title {
+        font-size: 20px;
+        /* Increase rank title font size */
+      }
 
-        /* Style the table */
-        table {
-            margin-top: 20px;
-        }
+      /* Style the table */
+      table {
+        margin-top: 20px;
+      }
 
-        th,
-        td {
-            padding: 10px;
-        }
+      th,
+      td {
+        padding: 10px;
+      }
 
-        th {
-            background-color: #f2f2f2;
-        }
+      th {
+        background-color: #f2f2f2;
+      }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .dhsbanner {
-           top: 0;
-           left: 0;
-           z-index: 9999; /* Adjust the z-index value as needed */
-           background: url('https://i.imgur.com/7b1KYHw.png');
-            background-size: cover;
-            background-attachment: fixed;
-         }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .dhsbanner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        /* Adjust the z-index value as needed */
+        background: url("https://i.imgur.com/7b1KYHw.png");
+        background-size: cover;
+        width: 1920px; /* Make sure it spans the entire width */
+        height: 1080px; /* Set the desired height */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="dhsbanner"></div>
     <div class="content-container">
+      <h1>SAN ANDREAS STATE POLICE STANDARD OPERATING PROCEDURE</h1>
 
-        <h1>SAN ANDREAS STATE POLICE STANDARD OPERATING PROCEDURE</h1>
+      <h2>DEPARTMENT POLICY HANDBOOK + FIELD MANUAL</h2>
 
-        <h2>DEPARTMENT POLICY HANDBOOK + FIELD MANUAL</h2>
+      <h3>INCUMBENT STATE POLICE ADMINISTRATION:</h3>
+      <ul>
+        <li>Commander (Vacant)</li>
+        <li>Deputy Commander (Vacant)</li>
+      </ul>
 
-        <h3>INCUMBENT STATE POLICE ADMINISTRATION:</h3>
-        <ul>
-            <li>Commander (Vacant)</li>
-            <li>Deputy Commander (Vacant)</li>
-        </ul>
+      <p><strong>Authored by:</strong> FivePD Developer KryClopz</p>
+      <p><strong>Amended by:</strong> Server Ownership</p>
+      <p><strong>Last Updated/Amended:</strong> 10/9/2023</p>
 
-        <p><strong>Authored by:</strong> FivePD Developer KryClopz</p>
-        <p><strong>Amended by:</strong> Server Ownership</p>
-        <p><strong>Last Updated/Amended:</strong> 10/9/2023</p>
+      <h2>TABLE OF CONTENTS</h2>
+      <ul>
+        <li><a href="#section1">Section 1 – Legal Authority</a></li>
+        <li><a href="#section2">Section 2 – Code of Conduct</a></li>
+        <li><a href="#section3">Section 3 – Anti-Corruption Campaign</a></li>
+        <li><a href="#section4">Section 4 – Chain of Command</a></li>
+        <li><a href="#section5">Section 5 – Vehicle Policies</a></li>
+        <li><a href="#section6">Section 6 – Uniforms</a></li>
+      </ul>
 
-        <h2>TABLE OF CONTENTS</h2>
-        <ul>
-            <li><a href="#section1">Section 1 – Legal Authority</a></li>
-            <li><a href="#section2">Section 2 – Code of Conduct</a></li>
-            <li><a href="#section3">Section 3 – Anti-Corruption Campaign</a></li>
-            <li><a href="#section4">Section 4 – Chain of Command</a></li>
-            <li><a href="#section5">Section 5 – Vehicle Policies</a></li>
-            <li><a href="#section6">Section 6 – Uniforms</a></li>
-        </ul>
+      <h2 id="section1">SECTION 1: LEGAL AUTHORITY</h2>
+      <h3>PURPOSE:</h3>
+      <p>To outline the legal authority of the San Andreas State Police.</p>
 
-        <h2 id="section1">SECTION 1: LEGAL AUTHORITY</h2>
-        <h3>PURPOSE:</h3>
-        <p>To outline the legal authority of the San Andreas State Police.</p>
+      <h3>POLICY:</h3>
+      <p>
+        The San Andreas State Police derives its legal authority from the San
+        Andreas State Constitution and the San Andreas Penal Code. State
+        Troopers are sworn to support the Constitution of the United States and
+        uphold the laws of the State of San Andreas in accordance with the
+        Legislative, Judicial, and Executive branches of the San Andreas State
+        Government.
+      </p>
 
-        <h3>POLICY:</h3>
-        <p>The San Andreas State Police derives its legal authority from the San Andreas State Constitution and the San
-            Andreas Penal Code. State Troopers are sworn to support the Constitution of the United States and uphold the
-            laws of the State of San Andreas in accordance with the Legislative, Judicial, and Executive branches of the
-            San
-            Andreas State Government.</p>
+      <h3>PROCEDURE:</h3>
+      <p>
+        The State Commissioner of Police is a constitutional officer as per the
+        San Andreas State Constitution, Article IV, Section 1. State Troopers
+        have criminal and civil jurisdiction to enforce state laws and support
+        local ordinances.
+      </p>
 
-        <h3>PROCEDURE:</h3>
-        <p>The State Commissioner of Police is a constitutional officer as per the San Andreas State Constitution,
-            Article
-            IV, Section 1. State Troopers have criminal and civil jurisdiction to enforce state laws and support local
-            ordinances.</p>
+      <h3>JURISDICTION:</h3>
+      <p>
+        Jurisdiction is restricted by law or policy. The San Andreas State
+        Police maintain civil and concurrent criminal jurisdiction on state and
+        federal-owned properties, including various areas such as highways and
+        penitentiaries. Civil jurisdiction extends to cities, townships, or
+        properties not owned by the state or federal governments.
+      </p>
 
-        <h3>JURISDICTION:</h3>
-        <p>Jurisdiction is restricted by law or policy. The San Andreas State Police maintain civil and concurrent
-            criminal
-            jurisdiction on state and federal-owned properties, including various areas such as highways and
-            penitentiaries.
-            Civil jurisdiction extends to cities, townships, or properties not owned by the state or federal
-            governments.
-        </p>
+      <h2 id="section2">SECTION 2: CODE OF CONDUCT</h2>
+      <h3>PURPOSE:</h3>
+      <p>
+        To establish a uniform code of conduct among all San Andreas State
+        Troopers.
+      </p>
 
-        <h2 id="section2">SECTION 2: CODE OF CONDUCT</h2>
-        <h3>PURPOSE:</h3>
-        <p>To establish a uniform code of conduct among all San Andreas State Troopers.</p>
+      <h3>PROCEDURE:</h3>
+      <p>
+        All State Troopers will uphold a demeanor of friendliness,
+        professionalism and approachability befitting an officiated member of
+        law enforcement representing the State Police, at all times, while on
+        duty. No State Trooper will obey or carry out any order or command that
+        is unlawful. The chain of command of the State Police will be adhered to
+        at all times. (Section 4 of this document pertains to the chain of
+        command.) All State Troopers are expected to retain knowledge of their
+        training (especially the Use of Force Continuum) as well as the contents
+        of this S.O.P. at all times, and conduct themselves within the scope of
+        both. State Troopers are expected to lead by example and set the
+        standard for their team. Upon joining the department, SD-7 Probationary
+        Troopers will complete a training program and evaluation conducted and
+        mandated by the department’s Field Training Program. Failure to complete
+        the program with satisfactory scores will result in a re-training and/or
+        non-hire. The High Command (administrative) team of the San Andreas
+        State Police reserves the right to add, retract, alter, or amend any of
+        the content within this document at any time, with notice.
+      </p>
 
-        <h3>PROCEDURE:</h3>
-        <p>
-            All State Troopers will uphold a demeanor of friendliness, professionalism and approachability befitting an
-            officiated member of law enforcement representing the State Police, at all times, while on duty.
-            No State Trooper will obey or carry out any order or command that is unlawful.
-            The chain of command of the State Police will be adhered to at all times. (Section 4 of this document
-            pertains
-            to the chain of command.)
-            All State Troopers are expected to retain knowledge of their training (especially the Use of Force
-            Continuum) as
-            well as the contents of this S.O.P. at all times, and conduct themselves within the scope of both. State
-            Troopers are expected to lead by example and set the standard for their team.
-            Upon joining the department, SD-7 Probationary Troopers will complete a training program and evaluation
-            conducted and mandated by the department’s Field Training Program. Failure to complete the program with
-            satisfactory scores will result in a re-training and/or non-hire.
-            The High Command (administrative) team of the San Andreas State Police reserves the right to add, retract,
-            alter, or amend any of the content within this document at any time, with notice.
-        </p>
+      <h3>PENALTIES:</h3>
+      <p>
+        10-71 Supervisors reserve the right to dismiss insubordinate troopers
+        from an active scene or from duty for a determined period of time.
+        Repeated offenses will lead to an escalation in consequences up to and
+        including termination of employment from the department. State Troopers
+        will not shirk duties, enter bars/taverns, theaters or other such
+        establishments, or attend public entertainment except in order to
+        further fulfill job duties. Troopers wearing a uniform or any clothing
+        that identifies them as an officer of the San Andreas State Police will
+        not gamble or consume alcoholic beverages, especially on duty. Penalties
+        range from suspension to termination of employment from the department.
+        The duties performed by the San Andreas State Police are vital to the
+        safety and well-being of the public. It is essential that all troopers
+        maintain a high standard of conduct. Any witnessed or reported
+        misconduct will be thoroughly investigated by High Command. The
+        administrative team of the department aforementioned reserves the right
+        to suspend any trooper from duty during an ongoing investigation if
+        deemed necessary.
+      </p>
 
-        <h3>PENALTIES:</h3>
-        <p>
-            10-71 Supervisors reserve the right to dismiss insubordinate troopers from an active scene or from duty for
-            a
-            determined period of time. Repeated offenses will lead to an escalation in consequences up to and including
-            termination of employment from the department.
-            State Troopers will not shirk duties, enter bars/taverns, theaters or other such establishments, or attend
-            public entertainment except in order to further fulfill job duties. Troopers wearing a uniform or any
-            clothing
-            that identifies them as an officer of the San Andreas State Police will not gamble or consume alcoholic
-            beverages, especially on duty. Penalties range from suspension to termination of employment from the
-            department.
-            The duties performed by the San Andreas State Police are vital to the safety and well-being of the public.
-            It is
-            essential that all troopers maintain a high standard of conduct. Any witnessed or reported misconduct will
-            be
-            thoroughly investigated by High Command. The administrative team of the department aforementioned reserves
-            the
-            right to suspend any trooper from duty during an ongoing investigation if deemed necessary.
-        </p>
+      <h2 id="section3">SECTION 3: ANTI-CORRUPTION CAMPAIGN</h2>
+      <h3>PHILOSOPHY</h3>
+      <p>
+        As an extension to our policy regarding misconduct, the San Andreas
+        State Police in conjunction with The Blaine County Sheriff’s Office and
+        the Los Santos Police Department have signed a joint agreement to create
+        a staunch policy against illegal/unlawful activities conducted by law
+        enforcement officials including corruption and collusion with any form
+        of criminal element, or organized crime. As an active duty law
+        enforcement officer, affiliating yourself with criminals not only poses
+        a severe security risk to yourself and your team members, but also poses
+        a severe security threat to the public’s well-being. At best, you are
+        putting your livelihood and career at risk; at worst, you are putting
+        your entire life on the line. It simply isn’t worth it. Anyone suspected
+        or accused of colluding with organized crime will be placed on an
+        indefinite suspension from duty until an Internal Affairs investigation
+        is completed. Anyone found guilty of corruption or collusion with a
+        criminal organization will be terminated from the S.A.S.P., and a
+        warrant will be issued for their arrest. Information will be forwarded
+        to the Department of Justice as well as any relevant Federal
+        authorities. **GOALS:** - To eliminate the presence and possibility of
+        illegal activity and corruption within the S.A.S.P. **OBJECTIVES:** - To
+        reduce if not eliminate the grip of organized crime families and
+        syndicates on law enforcement officials within the State of San Andreas.
+        - To tackle organized crime as part of an ongoing series of policies,
+        investigations and tactics to thwart crime and uphold public safety.
+      </p>
 
-        <h2 id="section3">SECTION 3: ANTI-CORRUPTION CAMPAIGN</h2>
-        <h3>PHILOSOPHY</h3>
-        <p>As an extension to our policy regarding misconduct, the San Andreas State Police in conjunction with The
-            Blaine
-            County Sheriff’s Office and the Los Santos Police Department have signed a joint agreement to create a
-            staunch
-            policy against illegal/unlawful activities conducted by law enforcement officials including corruption and
-            collusion with any form of criminal element, or organized crime. As an active duty law enforcement officer,
-            affiliating yourself with criminals not only poses a severe security risk to yourself and your team members,
-            but
-            also poses a severe security threat to the public’s well-being. At best, you are putting your livelihood and
-            career at risk; at worst, you are putting your entire life on the line. It simply isn’t worth it.
+      <h2 id="section4">SECTION 4: CHAIN OF COMMAND</h2>
 
-            Anyone suspected or accused of colluding with organized crime will be placed on an indefinite suspension
-            from
-            duty until an Internal Affairs investigation is completed. Anyone found guilty of corruption or collusion
-            with a
-            criminal organization will be terminated from the S.A.S.P., and a warrant will be issued for their arrest.
-            Information will be forwarded to the Department of Justice as well as any relevant Federal authorities.
+      <h3>PURPOSE:</h3>
+      <p>
+        To outline enlisted ranks, their responsibilities, and the chain of
+        command in order from bottom-to-top of the chain.
+      </p>
 
-            **GOALS:**
-            - To eliminate the presence and possibility of illegal activity and corruption within the S.A.S.P.
+      <h3>PROCEDURE:</h3>
+      <p>
+        The chain of command is a chain of authority and accountability from the
+        highest position to the lowest element, with the goal being that
+        individuals receive instructions or guidance from only one supervisor
+        one rank above them. The chain of command from top to bottom is as
+        follows:
+      </p>
 
-            **OBJECTIVES:**
-            - To reduce if not eliminate the grip of organized crime families and syndicates on law enforcement
-            officials
-            within the State of San Andreas.
-            - To tackle organized crime as part of an ongoing series of policies, investigations and tactics to thwart
-            crime
-            and uphold public safety.
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Commander</td>
+          <td>
+            Has authority over the entire department, including documents. There
+            will be a Deputy Commander with the same responsibilities.
+          </td>
+        </tr>
+        <tr>
+          <td>Lieutenant</td>
+          <td>
+            Oversees all duty and patrol operations within the department, with
+            control over all patrolling activities. Responsible for reviewing
+            and approving demotions proposed by Sergeants.
+          </td>
+        </tr>
+        <tr>
+          <td>Sergeant</td>
+          <td>
+            Patrols, oversees lower levels, promotes Troopers to Trooper 1st
+            class, supervises lower ranking officers, has the authority to
+            remove Troopers if necessary (does not apply to Trooper 1st Class),
+            and can propose demotions to the Lieutenant.
+          </td>
+        </tr>
+        <tr>
+          <td>Trooper 1st Class</td>
+          <td>Responsible for patrolling and accepting new applicants.</td>
+        </tr>
+        <tr>
+          <td>Trooper</td>
+          <td>
+            The base level rank responsible for patrolling and protecting
+            citizens.
+          </td>
+        </tr>
+      </table>
 
-        <h2 id="section4">SECTION 4: CHAIN OF COMMAND</h2>
+      <p>
+        The San Andreas State Police’s administrative team reserves the right to
+        demote, promote, or dismiss any person(s)by means of professional
+        discretion.
+      </p>
 
-        <h3>PURPOSE:</h3>
-        <p>To outline enlisted ranks, their responsibilities, and the chain of command in order from bottom-to-top of
-            the
-            chain.</p>
+      <h2 id="section5">SECTION 5: VEHICLE POLICIES</h2>
 
-        <h3>PROCEDURE:</h3>
-        <p>
-            The chain of command is a chain of authority and accountability from the highest position to the lowest
-            element,
-            with the goal being that individuals receive instructions or guidance from only one supervisor one rank
-            above
-            them. The chain of command from top to bottom is as follows:
-        </p>
+      <h3>PURPOSE:</h3>
+      <p>
+        To outline protocols for choosing and driving department-owned vehicles
+        in a manner that is practical and effective.
+      </p>
 
-        <table>
-            <tr>
-                <th>Rank</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Commander</td>
-                <td>Has authority over the entire department, including documents. There will be a Deputy Commander with
-                    the same responsibilities.</td>
-            </tr>
-            <tr>
-                <td>Lieutenant</td>
-                <td>Oversees all duty and patrol operations within the department, with control over all patrolling
-                    activities. Responsible for reviewing and approving demotions proposed by Sergeants.</td>
-            </tr>
-            <tr>
-                <td>Sergeant</td>
-                <td>Patrols, oversees lower levels, promotes Troopers to Trooper 1st class, supervises lower ranking
-                    officers, has the authority to remove Troopers if necessary (does not apply to Trooper 1st Class), and can propose demotions
-                    to the Lieutenant.</td>
-            </tr>
-            <tr>
-                <td>Trooper 1st Class</td>
-                <td>Responsible for patrolling and accepting new applicants.</td>
-            </tr>
-            <tr>
-                <td>Trooper</td>
-                <td>The base level rank responsible for patrolling and protecting citizens.</td>
-            </tr>
-        </table>
+      <h3>PROCEDURE:</h3>
+      <p>
+        Consult the SASP Vehicle Structure document for information on the San
+        Andreas State Police patrol fleet. Any detention of an individual,
+        including any arrests, must be conducted with a “marked” vehicle. State
+        Troopers shall not under any circumstances discharge their firearm at or
+        from a moving vehicle unless an occupant of a fleeing vehicle is using
+        deadly force against them or another person. This includes if an
+        occupant is attempting to use the vehicle to cause bodily injury or
+        death to the deputy or another person. PIT (Pursuit Intervention
+        Technique) maneuvers may be conducted during a 10-80 in which the
+        vehicle occupant is refusing to stop or comply and is recklessly
+        driving. PITs may only be performed by vehicles equipped with a push-bar
+        in clement weather, with speeds under 80 MPH, and with the approval of a
+        10-71 as a successful PIT may cause accidental bodily injury or death of
+        the occupant. If a pursuit is to exceed 150 MPH, all units are to
+        immediately disengage the pursuit and initiate a BOLO on the vehicle.
+        Vehicle pursuits at or above this speed have been deemed too unsafe to
+        intervene by order of the San Andreas State Police command team.
+      </p>
 
-        <p>The San Andreas State Police’s administrative team reserves the right to demote, promote, or dismiss any
-            person(s)by means of professional discretion.</p>
+      <h2 id="section6">SECTION 6: UNIFORMS (MALE)</h2>
 
-        <h2 id="section5">SECTION 5: VEHICLE POLICIES</h2>
+      <h3>PURPOSE:</h3>
+      <p>
+        To establish a clean and professional uniform code among members of the
+        department.
+      </p>
 
-        <h3>PURPOSE:</h3>
-        <p>To outline protocols for choosing and driving department-owned vehicles in a manner that is practical and
-            effective.</p>
+      <h3>PROCEDURE:</h3>
+      <p>
+        All State Troopers will adhere to uniform guidelines laid out below
+        while on duty. Any variations that differ from the uniform codes
+        cataloged below will need to be approved by a Lieutenant or higher.
+      </p>
 
-        <h3>PROCEDURE:</h3>
-        <p>
-            Consult the SASP Vehicle Structure document for information on the San Andreas State Police patrol fleet.
-            Any detention of an individual, including any arrests, must be conducted with a “marked” vehicle.
-            State Troopers shall not under any circumstances discharge their firearm at or from a moving vehicle unless
-            an
-            occupant of a fleeing vehicle is using deadly force against them or another person. This includes if an
-            occupant
-            is attempting to use the vehicle to cause bodily injury or death to the deputy or another person.
-            PIT (Pursuit Intervention Technique) maneuvers may be conducted during a 10-80 in which the vehicle occupant
-            is
-            refusing to stop or comply and is recklessly driving. PITs may only be performed by vehicles equipped with a
-            push-bar in clement weather, with speeds under 80 MPH, and with the approval of a 10-71 as a successful PIT
-            may
-            cause accidental bodily injury or death of the occupant.
-            If a pursuit is to exceed 150 MPH, all units are to immediately disengage the pursuit and initiate a BOLO on
-            the
-            vehicle. Vehicle pursuits at or above this speed have been deemed too unsafe to intervene by order of the
-            San
-            Andreas State Police command team.
-        </p>
+      <table>
+        <tr>
+          <th>Uniform</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Commander</td>
+          <td>
+            Commanders are required to wear the highest level of uniform, which
+            includes a formal dress uniform with a hat and badges.
+          </td>
+        </tr>
+        <tr>
+          <td>Lieutenant</td>
+          <td>
+            Lieutenants are expected to wear a formal dress uniform with badges,
+            but the hat is optional.
+          </td>
+        </tr>
+        <tr>
+          <td>Sergeant</td>
+          <td>
+            <p>Sergeants can choose between two options:</p>
+            <ul>
+              <li>Standard uniform with badges and a hat (optional).</li>
+              <li>Long-sleeve uniform with badges and a hat (optional).</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Trooper 1st Class</td>
+          <td>
+            Troopers 1st Class are required to wear a standard uniform with
+            badges, but the hat is optional.
+          </td>
+        </tr>
+        <tr>
+          <td>Trooper</td>
+          <td>
+            Troopers should wear the standard uniform with badges and a hat.
+          </td>
+        </tr>
+      </table>
 
-        <h2 id="section6">SECTION 6: UNIFORMS (MALE)</h2>
-
-        <h3>PURPOSE:</h3>
-        <p>To establish a clean and professional uniform code among members of the department.
-
-        <h3>PROCEDURE:</h3>
-        <p>All State Troopers will adhere to uniform guidelines laid out below while on duty. Any variations that
-            differ from the uniform codes cataloged below will need to be approved by a Lieutenant or higher.</p>
-
-
-        <table>
-            <tr>
-                <th>Uniform</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Commander</td>
-                <td>Commanders are required to wear the highest level of uniform, which includes a formal dress uniform
-                    with a hat and badges.</td>
-            </tr>
-            <tr>
-                <td>Lieutenant</td>
-                <td>Lieutenants are expected to wear a formal dress uniform with badges, but the hat is optional.</td>
-            </tr>
-            <tr>
-                <td>Sergeant</td>
-                <td>
-                    <p>Sergeants can choose between two options:</p>
-                    <ul>
-                        <li>Standard uniform with badges and a hat (optional).</li>
-                        <li>Long-sleeve uniform with badges and a hat (optional).</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Trooper 1st Class</td>
-                <td>Troopers 1st Class are required to wear a standard uniform with badges, but the hat is optional.
-                </td>
-            </tr>
-            <tr>
-                <td>Trooper</td>
-                <td>Troopers should wear the standard uniform with badges and a hat.</td>
-            </tr>
-        </table>
-
-        <p>
-            <strong>Note:</strong> The detailed uniform code can be found in the discord.
-        </p>
+      <p>
+        <strong>Note:</strong> The detailed uniform code can be found in the
+        discord.
+      </p>
     </div>
-
-</body>
-
+  </body>
 </html>
